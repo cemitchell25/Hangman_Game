@@ -1,0 +1,31 @@
+
+
+body {
+	background-image: url("../Hangman_Game/food.png");
+	font-family: 'Patua One', cursive;
+}
+
+h1 {
+	text-align: center;
+	color: #8e2626;
+	font-size: 60px;
+	background-color: white;
+	object-position: center;
+	margin-bottom: 50px;
+}
+
+.subbox {
+	background-color: white;
+	border-style: dotted;
+	border-color: #8e2626;
+	border-width: 3px;
+}
+
+p {
+	font-size: 30px;
+
+}
+
+.image {
+	padding-left:55px;
+}

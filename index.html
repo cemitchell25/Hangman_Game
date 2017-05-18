@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+        <link rel="stylesheet" type= "text/css" href="reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>Hangman Game!</title>
+  </head>
+
+
+
+
+  <body onload="gameTime()">
+
+
+    <div class ="container">
+      <div class="row">
+        
+        <div class="col-md-8 col-md-offset-2">
+          
+    <div>
+      <h1> Hangman Game Presents:
+        <br>
+       ALL ABOUT FOOD!</h1>
+
+        </div>
+      </div>
+    </div>
+
+
+     <div class="row">
+        
+        <div class="col-md-4 col-md-offset-2 subbox">
+          <img src = "../Hangman_Game/doge.jpeg" class = "image">
+
+     
+
+
+      </div>
+
+         <div class="col-md-4 subbox"> 
+
+         <p> Enter any key to get started!</p>
+         <br>
+
+        <p id="answer"></p>
+        <br>
+        <input id="guess" type="text">
+        <input type = "button" value = "letter" onclick= "guess()"/>
+
+        <p id= "counter"></p>
+  
+ 
+        
+
+
+
+
+
+    </div>
+  </div>
+  </div>
+
+    <script src="javascript.js"></script>
+    </body>
+  </html>
