@@ -41,6 +41,17 @@
                             {
                                 answerArray[i] = letter;
                             }
+
+                            console.log(answerArray);
+                            console.log(letter.length);
+                            console.log(randomWord);
+                            console.log(letter);
+
+                            if (answerArray === randomWord) {
+                            alert("YOU WON!");
+
+                            }
+
                     }
 
                 
@@ -51,9 +62,6 @@
 
                     }}
 
-            if (randomWord[i] === answerArray[i]) {
-                alert("YOU WON!");
-            }
   
 
 
