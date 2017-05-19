@@ -10,27 +10,27 @@
         "liverwurst"
         ];
 
-
+        var randomWord = food[Math.floor(Math.random() * food.length)];
         var count =0;
         var answerArray = [];
 
       function gameTime() {
 
-         var randomWord = food[Math.floor(Math.random() * food.length)];
 
-
-        for (var i=0; i<randomWord.length; i++) {
-          answerArray[i] = "_";
-        }
+                for (var i=0; i<randomWord.length; i++) {
+                answerArray[i] = "_";
+                }
 
         document.getElementById("answer").innerHTML = answerArray.join(" ");
+
+        };
           
 
 
 
-                function playerGuess() {
+        function playerGuess() {
 
-                var letter = document.getElementById("letter").value;
+            var letter = document.getElementById("letter").value;
 
                 if (letter.length > 0)
 
@@ -41,14 +41,25 @@
                             {
                                 answerArray[i] = letter;
                             }
+                    }
 
-                        }
                 
                 count++;
                 document.getElementById("guesses").innerHTML = "# of guesses: " + count;
                 document.getElementById("answer").innerHTML = answerArray.join(" ");
 
-                    }}}
+
+                    }}
+
+            if (randomWord[i] === answerArray[i]) {
+                alert("YOU WON!");
+            }
+  
+
+
+          
+           
+
 
 
 
