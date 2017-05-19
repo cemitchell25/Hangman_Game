@@ -13,6 +13,7 @@
         var randomWord = food[Math.floor(Math.random() * food.length)];
         var count =0;
         var answerArray = [];
+        var letterGuessed = [];
 
       function gameTime() {
 
@@ -23,15 +24,14 @@
 
         document.getElementById("answer").innerHTML = answerArray.join(" ");
 
-        };
+        }
           
 
 
 
         function playerGuess() {
 
-            var guess = document.getElementById("guess").value;
-
+                var guess = document.getElementById("guess").value;
                 if (guess.length > 0)
 
                       for (var i = 0; randomWord.length > i; i++) {
@@ -41,6 +41,7 @@
 
                             {
                                 answerArray[i] = guess;
+                       
                             }
 
 
@@ -55,13 +56,12 @@
                          console.log(food[i]);
                             console.log(answerArray.join(""));
                             console.log(randomWord);
-                            console.log(guess);
 
                 
                 count++;
+                document.getElementById("letter").innerHTML = "Letters used: " + guess.join(" ");
                 document.getElementById("guesses").innerHTML = "# of guesses: " + count;
                 document.getElementById("answer").innerHTML = answerArray.join(" ");
-                // document.getElementById("catwin").innerHTML = (img src= "../Hangman_Game/pusheen.jpg");
 
 
                  }    
