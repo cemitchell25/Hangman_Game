@@ -59,12 +59,12 @@
 
                 
                 count++;
-                document.getElementById("letter").innerHTML = "Letters used: " + guess.join(" ");
+                document.getElementById("letter").innerHTML = "Letters used: " + letterGuessed.join(guess);
                 document.getElementById("guesses").innerHTML = "# of guesses: " + count;
                 document.getElementById("answer").innerHTML = answerArray.join(" ");
 
 
-                 }    
+                 }  
                 
 
   
