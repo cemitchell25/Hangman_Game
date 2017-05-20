@@ -1,6 +1,3 @@
-
-
-
       var food = [
         "waffles",
         "tamales",
@@ -33,34 +30,23 @@
 
         function playerGuess(letter) {
 
-            var guess = document.getElementById("guess");
-            console.log(letterGuessed);
-            var push = letterGuessed.push(letter);
-
-
-            console.log(letterGuessed);
-
-            console.log(push, "IM THE PUSH");
-            console.log(guess, "IM THE GUESS");
-
-
-    
+            var guess = document.getElementById("guess").value;
+     
+            letterGuessed.push(letter);
 
            
-                if (guess.length > 0)
+                // if (guess.length > 0)
 
 
                       for (var i = 0; randomWord.length > i; i++) {
 
-                         if (randomWord[i] === guess)
-
-                            {
-                                answerArray[i] = guess;
+                         if (randomWord[i] === letter) {
+                                answerArray[i] = letter;
                        
                             }
                            
-                            if (randomWord === answerArray.join("")) 
-                            { alert("YOU WON! The correct word was " + randomWord + "!");
+                            if (randomWord === answerArray.join("")) { 
+                            alert("YOU WON! The correct word was " + randomWord + "!");
 
                             }
                     }
@@ -71,10 +57,8 @@
 
                 
                 count++;
-                var joined = push;
-
-                console.log(joined, "IM THE JOIN");
-                document.getElementById("letter").innerHTML = "Letters used: " + push;
+            
+                document.getElementById("letter").innerHTML = "Letters used: " + letterGuessed.join(" ");
                 document.getElementById("guesses").innerHTML = "# of guesses: " + count;
                 document.getElementById("answer").innerHTML = answerArray.join(" ");
 
@@ -85,9 +69,6 @@
 
                     playerGuess(event.key)
                  })
-                
-
-  
      
 
 
