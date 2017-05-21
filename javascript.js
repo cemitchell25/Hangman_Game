@@ -11,6 +11,7 @@
         var count =0;
         var answerArray = [];
         var letterGuessed = [];
+        var guessesRemaining = 20;
 
       function gameTime() {
 
@@ -49,17 +50,23 @@
                             alert("YOU WON! The correct word was " + randomWord + "!");
 
                             }
+
+                            if (guessesRemaining === 0) {
+
+                                alert("Whoops, you lose. Try again");
+                            }
                     }
 
                             console.log(food[i]);
                             console.log(answerArray.join(""));
                             console.log(randomWord);
 
-                
+                guessesRemaining--;
                 count++;
             
                 document.getElementById("letter").innerHTML = "Letters used: " + letterGuessed.join(" ");
                 document.getElementById("guesses").innerHTML = "# of guesses: " + count;
+                document.getElementById("remaining").innerHTML = "Guesses Remaining: " + guessesRemaining;
                 document.getElementById("answer").innerHTML = answerArray.join(" ");
 
 
